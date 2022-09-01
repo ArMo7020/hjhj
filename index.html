@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TRX MINING</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="static/mobile/css/public.css">
+    <script src="static/mobile/js/jquery.js"></script>
+    <script src="static/mobile/js/rem.js"></script>
+    <script src="static/plugs/layui-v2.5.6/layui.all.js" charset="utf-8"></script>
+</head>
+<body class="bg-main-login2">
+<link rel="stylesheet" href="static/mobile/css/index.css">
+<link rel="stylesheet" href="static/mobile/css/swiper.min.css">
+<script src="static/mobile/js/swiper.min.js"></script>
+
+<div class="header">
+    <div></div>
+    <div class="dot">
+        <a class="cursor" href="notice/lists.html"><img src="static/mobile/img/msg@2x.png" alt=""></a>
+        <a class="cursor" href="https://t.me/ncmtrx" target="_blank"><img src="static/mobile/img/kefu@2x.png" alt=""></a>
+        <a class="language"><img src="static/mobile/img/lan@2x.png" alt=""></a>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+	setInterval(function (){
+		$.post("https://trx.ncmtrx.com/ajax/getmsg.html", function(result){
+			if( result.msg>0 ) {
+				$('.msg i').show();
+			}
+		});
+	},3000)
+</script>
+<div class="head-dropdown" style="display: none;">
+        <div class="changlang cursor" data-lang="en-us">English</div>
+        <div class="changlang cursor" data-lang="zh-cn">中文</div>
+        <div class="changlang cursor" data-lang="ko-kr">한국인</div>
+        <div class="changlang cursor" data-lang="hk-cn">繁体</div>
+        <div class="changlang cursor" data-lang="ja-jp">日本</div>
+        <div class="changlang cursor" data-lang="ru-ru">русский</div>
+        <div class="changlang cursor" data-lang="es-es">Espa&ntilde;oL</div>
+        <div class="changlang cursor" data-lang="it-it">italiano</div>
+        <div class="changlang cursor" data-lang="ar-ae">عربي</div>
+    </div>
+
+<script>
+    $("body").click(function (e) {
+        if ($(e.target).closest(".language").length == 0) {
+            $(".head-dropdown").hide();
+        }
+    });
+    $(".language").click(function () {
+
+        $(".head-dropdown").show()
+
+    })
+    $(".changlang").click(function () {
+        var lang = $(this).attr('data-lang');
+        $.get("https://trx.ncmtrx.com/ajax/lang.html", {lang: lang}, function (res) {
+            if (res.code == 1) {
+                window.location.reload()
+            }
+        })
+    })
+
+
+</script>
+		
+
+<div class="bodydiv">
+<!--    <div class="main_title">-->
+<!--        <div>Total Balance</div>-->
+<!--        <div>7020.0000 <span>TRX</span></div>-->
+<!--    </div>-->
+
+    <div class="swiper-Wrapper">
+
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                    <img src="static/mobile/img/703d70af0c4db2a3ea12e6b504db53cc.jpg" alt="">
+                </div>
+                                <div class="swiper-slide">
+                    <img src="static/mobile/img/fba42009de7aef16d74440737d795653.jpg" alt="">
+                </div>
+                                <div class="swiper-slide">
+                    <img src="static/mobile/img/dc011cf2b4cce293033342f7fd8ba680.jpg" alt="">
+                </div>
+                                <div class="swiper-slide">
+                    <img src="static/mobile/img/294c1c1a91b6fa0b1a1542efcdc4c008.jpg" alt="">
+                </div>
+                            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+<!--            &lt;!&ndash; Add Arrows &ndash;&gt;-->
+<!--            <div class="swiper-button-next"></div>-->
+<!--            <div class="swiper-button-prev"></div>-->
+        </div>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                loop: true, // 循环模式选项
+                autoplay: { // 可选选项，自动滑动
+                    delay: 3000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets'
+                },
+                observer: true,
+                observeParents: true,
+                // navigation: {
+                //     nextEl: '.swiper-button-next',
+                //     prevEl: '.swiper-button-prev',
+                // },
+            });
+        </script>
+    </div>
+
+    <a class="contact bg-contact-login2">
+        <img src="static/mobile/img/icon_notice@2x.png" alt=""/>
+        <marquee behavior="scroll" direction="" scrollamount="3"
+                 style="font-weight: 500; color: rgba(255, 255, 255, 0.6);">
+                        Welcome to TRX7020: Customer service online time is 12:00-00:00 Singapore Time                    </marquee>
+    </a>
+        <a class="main_problem flex bg-card-login2" href="https://trx.ncmtrx.com/notice/detail.html?id=44">
+        <img src="static/mobile/img/icon_question@2x.png" alt="">
+        <div>
+            <div>Company Profile</div>
+            <div></div>
+        </div>
+        <img src="static/mobile/img/arrow_r@2x.png" alt="">
+    </a>
+        <div class="navbar">
+        <div class="navbar-col">
+            <a class="navbar-item cursor bg-nav-item-login2" href="recharge/index.html">
+                <img src="static/mobile/img/icon_home_nav01@2x.0b182dc8.png" alt="">
+                <div>Deposit</div>
+            </a>
+            <a class="navbar-item cursor bg-nav-item-login2" href="https://trx.ncmtrx.com/withdrawal/index.html">
+                <img src="static/mobile/img/icon_home_nav02@2x.d58131ed.png" alt="">
+                <div>Withdrawal</div>
+            </a>
+            <a class="navbar-item cursor bg-nav-item-login2" href="https://trx.ncmtrx.com/share/index.html">
+                <img src="static/mobile/img/icon_my04@2x.4fafcf14.png" alt="">
+                <div>Share</div>
+            </a>
+        </div>
+        <div class="navbar-col">
+            <a class="navbar-item cursor bg-nav-item-login2" href="https://trx.ncmtrx.com/team/index.html">
+                <img src="static/mobile/img/icon_my01@2x.da7984b2.png" alt="">
+                <div>My team</div>
+            </a>
+            <a class="navbar-item cursor bg-nav-item-login2" href="https://play.google.com/store/apps/details?id=com.tygyws2s.ju8jh79h" target="_blank">
+                <img src="static/mobile/img/icon_my06@2x.61a07294.png" alt="">
+                <div>App</div>
+            </a>
+            <a class="navbar-item cursor bg-nav-item-login2" href="https://trx.ncmtrx.com/wicket/loginout.html">
+                <img src="static/mobile/img/icon_home_nav06@2x.3795f49e.png" alt="">
+                <div>Logout</div>
+            </a>
+        </div>
+    </div>
+    <div class="label-container">
+        <a class="main_problem flex bg-card-login2">
+            <img src="static/mobile/img/icon_wallet@2x.png" alt="">
+            <div>
+                <div>Basic <span style="font-size: 10px;color: #a9acb2;">Account</span>
+                </div>
+                <div>7020 <span style="font-size: 10px;color: #FFF;">TRX</span>≈
+                    $ 627.6836                </div>
+            </div>
+            <img src="static/mobile/img/arrow_r@2x.png" alt="">
+        </a>
+        <a class="main_problem flex bg-card-login2">
+            <img src="static/mobile/img/icon_promotion@2x.png" alt="">
+            <div>
+                <div>Promotion <span style="font-size: 10px;color: #a9acb2;">Account</span>
+                </div>
+                <div>0.0000 <span style="font-size: 10px;color: #FFF;">TRX</span>≈ $ 0.0000</div>
+            </div>
+            <img src="static/mobile/img/arrow_r@2x.png" alt="">
+        </a>
+    </div>
+
+    <div class="main_join bg-contact-login2">
+        <div class="c_EEC87A ft40 text-center font-bold mb10">Join to be a TRON Millionaire</div>
+        <div class="c-white ft28 des">
+            Use cloud mining and Defi technology to ensure that all users get the most TRX revenue.        </div>
+        <img class="img" src="static/mobile/img/icon_44.848a2789.png" alt="">
+        <a class="main_problem flex cursor" href="https://trx.ncmtrx.com/trading/index.html">
+            <div class="btn">Details</div>
+        </a>
+    </div>
+    <div class="main_display bg-contact-login2">
+        <p>Platform data display</p>
+        <div class="main_displayq2">
+            <div class="item">
+                <div>Total mining value</div>
+                <img src="static/mobile/img/icon_profit@2x.png" alt="">
+                <div style="font-size: 20px;font-weight: bold">12,459.62</div>
+            </div>
+            <div class="item">
+                <div>Membership</div>
+                <img src="static/mobile/img/icon_huiyuan@2x.png" alt="">
+                <div style="font-size: 20px;font-weight: bold">124</div>
+            </div>
+        </div>
+    </div>
+    <div class="main_join bg-contact-login2">
+        <div style="text-align: center;font-size: 12px;font-weight: 700;margin-bottom: 7px;color: #eec87a;">
+            About us        </div>
+        <div style="text-align: center;font-size: 18px;font-weight: 700;color: #fff;">We are at our best</div>
+        <img class="img" src="static/mobile/img/icon_49.de681bd4.png" alt="">
+        <div
+                style="width: 285px; margin: 7px auto 0;font-size: 9px; color: hsla(0,0%,100%,.6);text-align: center;">
+            Cloud mining offered a potentially cost-effective way of mining for Bitcoins Trx and other cryptocurrencies. At the same time, both Quantitative trading and DeFi technology will allow you to easily participate in blockchain transactions with a small amount of capital, and obtain stable income like insurance.        </div>
+    </div>
+    <div class="oartners bg-contact-login2">
+        <div style="text-align: center;font-size: 21px;margin-bottom: 30px; color: #eec87a; font-weight: 700;">
+            Global partners        </div>
+        <div class="img-item">
+            <div><img src="static/mobile/img/home1.png" alt=""></div>
+            <div><img src="static/mobile/img/home2.png" alt=""></div>
+            <div><img src="static/mobile/img/home3.png" alt=""></div>
+            <div><img src="static/mobile/img/home4.png" alt=""></div>
+            <div><img src="static/mobile/img/home5.png" alt=""></div>
+            <div><img src="static/mobile/img/home6.png" alt=""></div>
+        </div>
+    </div>
+</div>
+
+
+		<div class="footer bg-footer-login2">
+			<a class="footer-item cursor active" href="index/index.html">
+				<img src="static/mobile/img/tabbar01_pre@2x.png" alt="">
+				<div class="footer-text">Home</div>
+			</a>
+			<a class="footer-item cursor " href="trading/index.html">
+				<img src="static/mobile/img/tabbar02@2x.png" alt="">
+				<div class="footer-text">trading</div>
+			</a>
+			<a class="footer-item cursor " href="invest/index.html">
+				<img src="static/mobile/img/tabbar03@2x.png" alt="">
+				<div class="footer-text">Invest</div>
+			</a>
+			<a class="footer-item cursor " href="share/index.html">
+				<img src="static/mobile/img/tabbar04@2x.png" alt="">
+				<div class="footer-text">Share</div>
+			</a>
+			<a class="footer-item cursor " href="mine/index.html">
+				<img src="static/mobile/img/tabbar05@2x.png" alt="">
+				<div class="footer-text">Mine</div>
+			<a>
+		</div>
+				<div class="modal">
+			<div class="modal-mask"></div>
+			<div class="modal-body">
+				<div class="modal-header bg-modal-title-login2">
+					Welcome to TRX7020	
+					<img class="modal-close" src="static/mobile/img/btn_close@2x.png" alt="">
+				</div>
+				<div class="modal-cont bg-modal-content-login2">
+					<p>Telegram official customer service <span class="marker">http://bitly.ws/tbYx</span><br />
+Telegram official channel: <a href="http://bitly.ws/taYS">http://bitly.ws/taYS </a>
+Official website registration link: <span class="marker">https://trx.ncmtrx.com</span><br />
+Google APP link:<span class="marker">bit.ly/3wamNz6</span><br />
+If you are an investor, please come here. The latest quick principal and interest product is officially launched, with 24-hour principal and interest, and quick cash withdrawal. Recharge to the promotion account, you can participate, seize the opportunity, you are the next millionaire.<br />
+After successful registration, 8888TRX mining pool will be given away, and the minimum deposit is 5TRX. After the activation is successful, the 8888TRX donated by the company will bring you mining income every day, and the basic wallet balance can be fully withdrawn after the contract expires.<br />
+Description of mining income:<br />
+1: The investment basic account is recharged, and the basic account generates mining<br />
+Daily income, 5%~25% of the investment amount can be withdrawn every day.<br />
+You need to actively withdraw your income every day. This is long-term stable income.<br />
+For example: the following is the daily income range<br />
+VIP0 recharge up to: 5-10000trx. Daily withdrawal profit 5%<br />
+Vip1 recharge reaches: 10001-30000trx. Daily withdrawal profit 5.5%<br />
+Vip2 recharge up to: 30001-50000trx. Earn 6% profit on daily withdrawals<br />
+Vip3 recharge reaches: 50001-100000trx. Earn 7% profit on daily withdrawals<br />
+Vip4 recharge up to: 100001-300000trx. Earn 8% profit on daily withdrawals<br />
+Vip5 recharge reaches: 300001-500000trx. Earn 9% profit on daily withdrawals<br />
+Vip6 recharge reaches: 500001-1000000trx. Earn 12% profit on daily withdrawals<br />
+Vip7 recharge reaches: 1000001-3000000trx. Earn 15% profit on daily withdrawals<br />
+Vip8 recharge reaches: 3000001-5000000trx. Earn 20% profit on daily withdrawals<br />
+Vip9 recharge up to: 5000000trx. Earn 25% profit on daily withdrawals<br />
+NCM Tron returns are calculated based on your investment. Increase the deposit limit level, the higher the daily withdrawal rate, the greater the daily withdrawal income.<br />
+(Note) The mining income balance of the basic account will not automatically increase the accumulated deposit, and it needs to be withdrawn every day. If you do not withdraw the earnings of the day, you will lose the mining earnings of the day.<br />
+If you want to get more daily income, you need to increase the investment amount. this<br />
+The higher the cumulative deposit amount, the more money you will make every day.<br />
+2: Promotion income, promotion income is to share your invitation link with friends and<br />
+Relatives or any social media (like WhatsApp, Facebook,<br />
+YouTube, Instagram, Twitter and Telegram groups. earn promotional revenue from their ads<br />
+Apps and top-ups. The more users you invite, the more money you make.<br />
+You will earn up to 17% commission on three levels.<br />
+The first-level user&#39;s recharge reward is 10.0%, which can be withdrawn directly.<br />
+The secondary user&#39;s recharge reward is 5.0%, which can be withdrawn directly.<br />
+The top-up reward for third-level users is 2.0%, and they can be withdrawn directly.<br />
+The more team members, the more benefits, and the benefits are unlimited. These commissions will be sent to<br />
+your promotional accounts, you can withdraw them at any time.</p>
+	
+				</div>
+				<div class="modal-footer bg-modal-title-login2">
+					<div class="bg-modal-btn-login2">
+						<img src="static/mobile/img/icon_previous@2x.png" alt="">
+						Previous
+					</div>
+					<div class="bg-modal-btn-login2">
+						Next
+						<img style="margin-left: 8px;" src="static/mobile/img/icon_next@2x.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$('.modal-mask,.modal-close,.modal-footer').click(function(){
+				$('.modal').hide()
+			})
+
+		</script>		
+		
+</body>
+
+<script>
+    $('.v-service').click(function () {
+        let url = "https://api.whatsapp.com/send/?phone=%2B13478224504&amp;text&amp;type=phone_number&amp;app_absent=0";
+        window.open(url);
+    })
+</script>
+</html>
